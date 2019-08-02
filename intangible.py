@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import time
 import os
 from os.path import join
-import re
 
 output_dir = 'output'
 prefix = 'https://www.sec.gov'
@@ -32,7 +31,7 @@ def scrap_intangible(url):
         try:
             driver.find_element_by_partial_link_text('INTANGIBLE').click();
         except Exception:
-            print(url + ' does not have intangible section, skipping')
+            print(url + ' does not have intangible section')
             return None
     
     # Use BeautifulSoup to parse the DOM
@@ -49,7 +48,6 @@ def scrap_company(url):
     driver.get(url)
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     soup = soup.find(id="seriesDiv").find("table")
-    # print(soup.prettify())
     table_body = soup.find('tbody')
     rows = table_body.find_all('tr')
     year_companyLink = {}
@@ -80,16 +78,16 @@ def create_file_name(url, year):
     return ''.join(['CIK', url[a+4:b], '_', year, '.html'])
 
 def main():
+    create_output_dir()
     for url in urls:
-        create_output_dir()
         year_companyLink = scrap_company(url)
-        # print(year_companyLink)
         for year, companyLink in year_companyLink.items():
             url = '/'.join(s.strip('/') for s in [prefix, companyLink])
             print('Going to URL: ' + url)
             s = scrap_intangible(url)
             if s:
                 write_file(s, create_file_name(url, year))
-
+            else:
+                write_file('NA', create_file_name(url, year))
 if __name__ == "__main__":
     main()
