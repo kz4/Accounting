@@ -2,22 +2,13 @@
 ## Prerequisite
 Python, Selenium and BeautifulSoup
 ## Objective
-This scraps the Intangible Assets page from SEC. 
-1. Amazon
-https://www.sec.gov/cgi-bin/viewer?action=view&cik=1018724&accession_number=0001018724-19-000004&xbrl_type=v#
-Navigate -> Notes to Financial Statements -> Acquisitions, Goodwill, and Acquired Intangible Assets - whole thing
-2. Microsoft
-https://www.sec.gov/cgi-bin/viewer?action=view&cik=789019&accession_number=0001564590-18-019062&xbrl_type=v# 
-Notes to Financial Statements - Intangible Assets - whole thing
-3. Coach
-https://www.sec.gov/cgi-bin/viewer?action=view&cik=1116132&accession_number=0001116132-18-000021&xbrl_type=v#  
-Notes to Financial Statements - GOODWILL AND OTHER INTANGIBLE ASSETS - whole thing
-4. Tesla year 2019 and year 2018
-https://www.sec.gov/cgi-bin/viewer?action=view&cik=1318605&accession_number=0001564590-19-003165&xbrl_type=v# 
- Notes to Financial Statements - Intangible Assets - whole thing
-https://www.sec.gov/cgi-bin/viewer?action=view&cik=1318605&accession_number=0001564590-18-002956&xbrl_type=v
-Notes to Financial Statements - Goodwill and Intangible Assets - whole thing 
+Given a list of company, this scraps the Intangible Assets page from SEC for all the companies.
+Tesla for example
+1. Go to https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=10-K&dateb=&owner=exclude&count=40
+2. Click on each Interactive Data
+3. Go to Notes to Financial Statements - Intangible Assets - download the html file
+4. The naming convention would be: CIK0001318605_2017, CIK0001318605_2018
 ## Run
-`python IntangibleAssets.py`
+`python intangible.py`
 ## Example
-See tesla1.html and tesla2.html for sample output.
+See output folder for sample html result.
