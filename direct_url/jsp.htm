@@ -1,0 +1,639 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>View Filing Data</title>
+<script type="text/javascript" src="/include/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="/include/accordionMenu.js"></script>
+<script type="text/javascript" src="/include/Show.js"></script>
+<link rel="stylesheet" type="text/css" href="/include/interactive.css" />
+<link rel="stylesheet" type="text/css" href="/include/report.css" />
+<link rel="stylesheet" type="text/css" href="/include/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/include/xbrlViewerStyle.css" />
+<style type="text/css">li.octave {border-top: 1px solid black;}</style>
+<!--[if lt IE 8]>
+<style type="text/css">
+li.accordion a {display:inline-block;}
+li.accordion a {display:block;}
+</style>
+<![endif]-->
+<script type="text/javascript" language="javascript">
+var InstanceReportXslt = "/include/InstanceReport.xslt";
+var reports = new Array(139);
+    reports[0+1] = "/Archives/edgar/data/1318605/000156459019003165/R1.htm";
+    reports[1+1] = "/Archives/edgar/data/1318605/000156459019003165/R2.htm";
+    reports[2+1] = "/Archives/edgar/data/1318605/000156459019003165/R3.htm";
+    reports[3+1] = "/Archives/edgar/data/1318605/000156459019003165/R4.htm";
+    reports[4+1] = "/Archives/edgar/data/1318605/000156459019003165/R5.htm";
+    reports[5+1] = "/Archives/edgar/data/1318605/000156459019003165/R6.htm";
+    reports[6+1] = "/Archives/edgar/data/1318605/000156459019003165/R7.htm";
+    reports[7+1] = "/Archives/edgar/data/1318605/000156459019003165/R8.htm";
+    reports[8+1] = "/Archives/edgar/data/1318605/000156459019003165/R9.htm";
+    reports[9+1] = "/Archives/edgar/data/1318605/000156459019003165/R10.htm";
+    reports[10+1] = "/Archives/edgar/data/1318605/000156459019003165/R11.htm";
+    reports[11+1] = "/Archives/edgar/data/1318605/000156459019003165/R12.htm";
+    reports[12+1] = "/Archives/edgar/data/1318605/000156459019003165/R13.htm";
+    reports[13+1] = "/Archives/edgar/data/1318605/000156459019003165/R14.htm";
+    reports[14+1] = "/Archives/edgar/data/1318605/000156459019003165/R15.htm";
+    reports[15+1] = "/Archives/edgar/data/1318605/000156459019003165/R16.htm";
+    reports[16+1] = "/Archives/edgar/data/1318605/000156459019003165/R17.htm";
+    reports[17+1] = "/Archives/edgar/data/1318605/000156459019003165/R18.htm";
+    reports[18+1] = "/Archives/edgar/data/1318605/000156459019003165/R19.htm";
+    reports[19+1] = "/Archives/edgar/data/1318605/000156459019003165/R20.htm";
+    reports[20+1] = "/Archives/edgar/data/1318605/000156459019003165/R21.htm";
+    reports[21+1] = "/Archives/edgar/data/1318605/000156459019003165/R22.htm";
+    reports[22+1] = "/Archives/edgar/data/1318605/000156459019003165/R23.htm";
+    reports[23+1] = "/Archives/edgar/data/1318605/000156459019003165/R24.htm";
+    reports[24+1] = "/Archives/edgar/data/1318605/000156459019003165/R25.htm";
+    reports[25+1] = "/Archives/edgar/data/1318605/000156459019003165/R26.htm";
+    reports[26+1] = "/Archives/edgar/data/1318605/000156459019003165/R27.htm";
+    reports[27+1] = "/Archives/edgar/data/1318605/000156459019003165/R28.htm";
+    reports[28+1] = "/Archives/edgar/data/1318605/000156459019003165/R29.htm";
+    reports[29+1] = "/Archives/edgar/data/1318605/000156459019003165/R30.htm";
+    reports[30+1] = "/Archives/edgar/data/1318605/000156459019003165/R31.htm";
+    reports[31+1] = "/Archives/edgar/data/1318605/000156459019003165/R32.htm";
+    reports[32+1] = "/Archives/edgar/data/1318605/000156459019003165/R33.htm";
+    reports[33+1] = "/Archives/edgar/data/1318605/000156459019003165/R34.htm";
+    reports[34+1] = "/Archives/edgar/data/1318605/000156459019003165/R35.htm";
+    reports[35+1] = "/Archives/edgar/data/1318605/000156459019003165/R36.htm";
+    reports[36+1] = "/Archives/edgar/data/1318605/000156459019003165/R37.htm";
+    reports[37+1] = "/Archives/edgar/data/1318605/000156459019003165/R38.htm";
+    reports[38+1] = "/Archives/edgar/data/1318605/000156459019003165/R39.htm";
+    reports[39+1] = "/Archives/edgar/data/1318605/000156459019003165/R40.htm";
+    reports[40+1] = "/Archives/edgar/data/1318605/000156459019003165/R41.htm";
+    reports[41+1] = "/Archives/edgar/data/1318605/000156459019003165/R42.htm";
+    reports[42+1] = "/Archives/edgar/data/1318605/000156459019003165/R43.htm";
+    reports[43+1] = "/Archives/edgar/data/1318605/000156459019003165/R44.htm";
+    reports[44+1] = "/Archives/edgar/data/1318605/000156459019003165/R45.htm";
+    reports[45+1] = "/Archives/edgar/data/1318605/000156459019003165/R46.htm";
+    reports[46+1] = "/Archives/edgar/data/1318605/000156459019003165/R47.htm";
+    reports[47+1] = "/Archives/edgar/data/1318605/000156459019003165/R48.htm";
+    reports[48+1] = "/Archives/edgar/data/1318605/000156459019003165/R49.htm";
+    reports[49+1] = "/Archives/edgar/data/1318605/000156459019003165/R50.htm";
+    reports[50+1] = "/Archives/edgar/data/1318605/000156459019003165/R51.htm";
+    reports[51+1] = "/Archives/edgar/data/1318605/000156459019003165/R52.htm";
+    reports[52+1] = "/Archives/edgar/data/1318605/000156459019003165/R53.htm";
+    reports[53+1] = "/Archives/edgar/data/1318605/000156459019003165/R54.htm";
+    reports[54+1] = "/Archives/edgar/data/1318605/000156459019003165/R55.htm";
+    reports[55+1] = "/Archives/edgar/data/1318605/000156459019003165/R56.htm";
+    reports[56+1] = "/Archives/edgar/data/1318605/000156459019003165/R57.htm";
+    reports[57+1] = "/Archives/edgar/data/1318605/000156459019003165/R58.htm";
+    reports[58+1] = "/Archives/edgar/data/1318605/000156459019003165/R59.htm";
+    reports[59+1] = "/Archives/edgar/data/1318605/000156459019003165/R60.htm";
+    reports[60+1] = "/Archives/edgar/data/1318605/000156459019003165/R61.htm";
+    reports[61+1] = "/Archives/edgar/data/1318605/000156459019003165/R62.htm";
+    reports[62+1] = "/Archives/edgar/data/1318605/000156459019003165/R63.htm";
+    reports[63+1] = "/Archives/edgar/data/1318605/000156459019003165/R64.htm";
+    reports[64+1] = "/Archives/edgar/data/1318605/000156459019003165/R65.htm";
+    reports[65+1] = "/Archives/edgar/data/1318605/000156459019003165/R66.htm";
+    reports[66+1] = "/Archives/edgar/data/1318605/000156459019003165/R67.htm";
+    reports[67+1] = "/Archives/edgar/data/1318605/000156459019003165/R68.htm";
+    reports[68+1] = "/Archives/edgar/data/1318605/000156459019003165/R69.htm";
+    reports[69+1] = "/Archives/edgar/data/1318605/000156459019003165/R70.htm";
+    reports[70+1] = "/Archives/edgar/data/1318605/000156459019003165/R71.htm";
+    reports[71+1] = "/Archives/edgar/data/1318605/000156459019003165/R72.htm";
+    reports[72+1] = "/Archives/edgar/data/1318605/000156459019003165/R73.htm";
+    reports[73+1] = "/Archives/edgar/data/1318605/000156459019003165/R74.htm";
+    reports[74+1] = "/Archives/edgar/data/1318605/000156459019003165/R75.htm";
+    reports[75+1] = "/Archives/edgar/data/1318605/000156459019003165/R76.htm";
+    reports[76+1] = "/Archives/edgar/data/1318605/000156459019003165/R77.htm";
+    reports[77+1] = "/Archives/edgar/data/1318605/000156459019003165/R78.htm";
+    reports[78+1] = "/Archives/edgar/data/1318605/000156459019003165/R79.htm";
+    reports[79+1] = "/Archives/edgar/data/1318605/000156459019003165/R80.htm";
+    reports[80+1] = "/Archives/edgar/data/1318605/000156459019003165/R81.htm";
+    reports[81+1] = "/Archives/edgar/data/1318605/000156459019003165/R82.htm";
+    reports[82+1] = "/Archives/edgar/data/1318605/000156459019003165/R83.htm";
+    reports[83+1] = "/Archives/edgar/data/1318605/000156459019003165/R84.htm";
+    reports[84+1] = "/Archives/edgar/data/1318605/000156459019003165/R85.htm";
+    reports[85+1] = "/Archives/edgar/data/1318605/000156459019003165/R86.htm";
+    reports[86+1] = "/Archives/edgar/data/1318605/000156459019003165/R87.htm";
+    reports[87+1] = "/Archives/edgar/data/1318605/000156459019003165/R88.htm";
+    reports[88+1] = "/Archives/edgar/data/1318605/000156459019003165/R89.htm";
+    reports[89+1] = "/Archives/edgar/data/1318605/000156459019003165/R90.htm";
+    reports[90+1] = "/Archives/edgar/data/1318605/000156459019003165/R91.htm";
+    reports[91+1] = "/Archives/edgar/data/1318605/000156459019003165/R92.htm";
+    reports[92+1] = "/Archives/edgar/data/1318605/000156459019003165/R93.htm";
+    reports[93+1] = "/Archives/edgar/data/1318605/000156459019003165/R94.htm";
+    reports[94+1] = "/Archives/edgar/data/1318605/000156459019003165/R95.htm";
+    reports[95+1] = "/Archives/edgar/data/1318605/000156459019003165/R96.htm";
+    reports[96+1] = "/Archives/edgar/data/1318605/000156459019003165/R97.htm";
+    reports[97+1] = "/Archives/edgar/data/1318605/000156459019003165/R98.htm";
+    reports[98+1] = "/Archives/edgar/data/1318605/000156459019003165/R99.htm";
+    reports[99+1] = "/Archives/edgar/data/1318605/000156459019003165/R100.htm";
+    reports[100+1] = "/Archives/edgar/data/1318605/000156459019003165/R101.htm";
+    reports[101+1] = "/Archives/edgar/data/1318605/000156459019003165/R102.htm";
+    reports[102+1] = "/Archives/edgar/data/1318605/000156459019003165/R103.htm";
+    reports[103+1] = "/Archives/edgar/data/1318605/000156459019003165/R104.htm";
+    reports[104+1] = "/Archives/edgar/data/1318605/000156459019003165/R105.htm";
+    reports[105+1] = "/Archives/edgar/data/1318605/000156459019003165/R106.htm";
+    reports[106+1] = "/Archives/edgar/data/1318605/000156459019003165/R107.htm";
+    reports[107+1] = "/Archives/edgar/data/1318605/000156459019003165/R108.htm";
+    reports[108+1] = "/Archives/edgar/data/1318605/000156459019003165/R109.htm";
+    reports[109+1] = "/Archives/edgar/data/1318605/000156459019003165/R110.htm";
+    reports[110+1] = "/Archives/edgar/data/1318605/000156459019003165/R111.htm";
+    reports[111+1] = "/Archives/edgar/data/1318605/000156459019003165/R112.htm";
+    reports[112+1] = "/Archives/edgar/data/1318605/000156459019003165/R113.htm";
+    reports[113+1] = "/Archives/edgar/data/1318605/000156459019003165/R114.htm";
+    reports[114+1] = "/Archives/edgar/data/1318605/000156459019003165/R115.htm";
+    reports[115+1] = "/Archives/edgar/data/1318605/000156459019003165/R116.htm";
+    reports[116+1] = "/Archives/edgar/data/1318605/000156459019003165/R117.htm";
+    reports[117+1] = "/Archives/edgar/data/1318605/000156459019003165/R118.htm";
+    reports[118+1] = "/Archives/edgar/data/1318605/000156459019003165/R119.htm";
+    reports[119+1] = "/Archives/edgar/data/1318605/000156459019003165/R120.htm";
+    reports[120+1] = "/Archives/edgar/data/1318605/000156459019003165/R121.htm";
+    reports[121+1] = "/Archives/edgar/data/1318605/000156459019003165/R122.htm";
+    reports[122+1] = "/Archives/edgar/data/1318605/000156459019003165/R123.htm";
+    reports[123+1] = "/Archives/edgar/data/1318605/000156459019003165/R124.htm";
+    reports[124+1] = "/Archives/edgar/data/1318605/000156459019003165/R125.htm";
+    reports[125+1] = "/Archives/edgar/data/1318605/000156459019003165/R126.htm";
+    reports[126+1] = "/Archives/edgar/data/1318605/000156459019003165/R127.htm";
+    reports[127+1] = "/Archives/edgar/data/1318605/000156459019003165/R128.htm";
+    reports[128+1] = "/Archives/edgar/data/1318605/000156459019003165/R129.htm";
+    reports[129+1] = "/Archives/edgar/data/1318605/000156459019003165/R130.htm";
+    reports[130+1] = "/Archives/edgar/data/1318605/000156459019003165/R131.htm";
+    reports[131+1] = "/Archives/edgar/data/1318605/000156459019003165/R132.htm";
+    reports[132+1] = "/Archives/edgar/data/1318605/000156459019003165/R133.htm";
+    reports[133+1] = "/Archives/edgar/data/1318605/000156459019003165/R134.htm";
+    reports[134+1] = "/Archives/edgar/data/1318605/000156459019003165/R135.htm";
+    reports[135+1] = "/Archives/edgar/data/1318605/000156459019003165/R136.htm";
+    reports[136+1] = "/Archives/edgar/data/1318605/000156459019003165/R137.htm";
+    reports[137+1] = "/Archives/edgar/data/1318605/000156459019003165/R138.htm";
+    reports[138+1] = 'all';
+
+   function loadXSLDoc(url) {
+      var doc;
+      var jqxhr=$.ajax({type: "GET",
+                        url: url,
+                        async: false});
+
+      // code for IE
+      if (window.ActiveXObject || "ActiveXObject" in window) {
+         doc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.3.0");
+         doc.loadXML(jqxhr.responseText);
+      }
+
+      // code for other browsers
+      else if (document.implementation && document.implementation.createDocument) {
+         doc=document.implementation.createDocument("","",null);
+         doc.async=true;
+         doc = jqxhr.responseXML.documentElement;
+      }
+
+      return doc;
+   }
+
+   function fixSrcAttr(src) {
+      var url_path = "/Archives/edgar/data/1318605/000156459019003165/";
+      var uri = src.substr(0,5);
+      // No change is needed if the 'src' attribute contains an embedded image
+      if (uri == 'data:') {
+         return src;
+      }
+      // Absolute URL on EDGAR website is unchanged
+      var idx = src.lastIndexOf('https://s3.amazonaws.com/archives.sec.gov/edgar/data/')
+      if (idx > -1) {
+        return src;
+      } // For all other URLs use only basename component
+      var idx = src.lastIndexOf('/');
+      if (idx > -1) {
+         src = src.substring(idx+1,src.length);
+      }
+      return url_path + src;
+   }
+
+   function getReport(url, xsl_url) {
+      if (xsl_url == null) { xsl_url = InstanceReportXslt; }
+      var ext = url.substring(url.lastIndexOf('.')+1, url.length);
+      if (ext == 'htm') {
+          $.ajax({
+          type: "GET",
+          url: url,
+          dataType: "text",
+          async:false,
+          success: function (data) {
+                  // Strip out everything between the "TEXT" elements 
+                  var idx = data.indexOf('<TEXT>'); 
+                  if (idx > -1) {
+                     data = data.substring(idx+6,data.length);
+                     idx = data.indexOf('</TEXT>'); 
+                     if ( idx > -1) {
+                        data = data.substring(0,idx);
+                     }
+                  }
+          	 jQuery('#reportDiv').append(data)
+                  .find('img').attr('src', function(i, val) { return fixSrcAttr(val);}).end();
+              }
+          });            
+      } else {
+          $.ajax({
+          type: "GET",
+          url: url,
+          dataType: "text",
+          async: false,
+          success: function(data) {
+                  data = data.replace(/^\s+|\s+$/g, ''); // leading or trailing whitespace causes problems
+                  var path="/" + url.substring(1, url.lastIndexOf('/')+1);
+                  
+                  // code for IE
+                  if (window.ActiveXObject || "ActiveXObject" in window) {                  
+                     xsl_doc = loadXSLDoc(xsl_url)
+                     var xslt = new ActiveXObject("Msxml2.XSLTemplate.3.0");   
+                     xslt.stylesheet = xsl_doc;
+                     var xslproc = xslt.createProcessor();
+                     var doc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.3.0");
+                     doc.loadXML(data);
+                     xslproc.input = doc;
+                     xslproc.addParameter("source", path );
+                     xslproc.addParameter("asPage", "true" );
+                     xslproc.transform();
+                     // Find all images and prepend the base URL to the src attribute
+                     jQuery('#reportDiv').append(jQuery(xslproc.output)
+                                         .find('img')
+                                         .attr('src', function(i, val) {
+                                                         return fixSrcAttr(val);
+                                                      }).end());
+                  }                  
+                  // code for other browsers
+                  else if (document.implementation && document.implementation.createDocument) {
+                     xsltProcessor=new XSLTProcessor();
+                     xsltProcessor.importStylesheet(loadXSLDoc(xsl_url));                     
+                     xsltProcessor.setParameter(null,"source",path);
+                     xsltProcessor.setParameter(null,"asPage","true");
+                     parser = new DOMParser();
+                     xmlDoc = parser.parseFromString(data, "text/xml");
+                     var rpt = xsltProcessor.transformToFragment(xmlDoc, document);
+                     document.getElementById("reportDiv").appendChild(rpt);
+                     FixNotesForGeckoWebkit( document.getElementById( 'reportDiv' ) );
+                     // Find all images and prepend the base URL to the src attribute
+                     jQuery('#reportDiv').find('img')
+                                         .attr('src', function(i, val) {
+                                                         return fixSrcAttr(val);
+                                                      });
+                  } else {
+                     alert('Your browser cannot handle this script');
+                  }
+               }
+            });
+       }
+   }
+
+   function clearReportDiv() {
+      // code for IE
+      if (window.ActiveXObject || "ActiveXObject" in window) {
+         document.getElementById("reportDiv").innerHTML='';
+      }
+
+      // code for Mozilla, Firefox, Opera, etc.
+      else if (document.implementation && document.implementation.createDocument) {
+         x = document.getElementById("reportDiv").childNodes;
+         for (i=x.length-1;i>-1;i--) {
+            node = document.getElementById("reportDiv").childNodes[i];
+            if (node) {
+               document.getElementById("reportDiv").removeChild(node);
+            }
+         }
+      }
+   }
+
+   function loadReport(idx) {
+      if (window.XMLHttpRequest || window.ActiveXObject || "ActiveXObject" in window) {
+         clearReportDiv();
+         xsl_url = null;
+         if (reports[idx] == 'all') {
+            highlightAllMenuItems();
+            jQuery.ajaxSetup({async:false});
+            for (var i=1; i<=reports.length; i++) {
+               if (reports[i] != 'all') {
+                  getReport(reports[i], xsl_url);
+                  var li = document.getElementById('r'+idx);
+                  if (li) {
+                     li.parentNode.style.display='block';
+                  }
+               } else {
+                  break;
+               }
+            }
+         }
+
+         else { 
+            getReport(reports[idx], xsl_url);
+            var li = document.getElementById('r'+idx);
+            if (li) {
+               li.parentNode.style.display='block';
+            }
+         }
+         window.scrollTo(0,0);
+      }
+
+      else {
+         alert('Your browser cannot handle this script');
+      }
+   }
+
+   function highlight(link) {
+      var parent = document.getElementById( 'menu' );
+      var links = parent.getElementsByTagName( 'a' );
+
+      for (var i = 0; i < links.length; i++){
+         if (links[i].className == 'xbrlviewer') {
+            if (links[i] == link) {
+               link.style.background = "#C1CDCD";
+            } else {
+               links[i].style.background = "#F5F5EB";
+            }
+         }
+      }
+   }
+
+   //the parameter 'div' represents <div id="reportDiv">
+   function FixNotesForGeckoWebkit( div ){
+      //textContent is only found in "other" browsers
+      //if it exists, search it for our table - there should only be one
+      if( div.textContent ){
+         var tables = div.getElementsByTagName( 'table' );
+         if( tables.length ){
+            //loop through the tables
+           for( var t = 0; t < tables.length; t++ ){
+              var cells = tables[t].getElementsByTagName( 'td' );
+              //loop through the cells, checking for class="text" which indicates some kind of text content - this includes HTML for notes
+              for( var i = 0; i < cells.length; i++ ){
+                 var curCell = cells[ i ];
+                 if( curCell.className == 'text' ){
+                    //<td class="text" found - now check if this HTML had already been rendered - if so, we should not attempt to render it again
+                    var nodes = curCell.getElementsByTagName( '*' );
+                    if( nodes.length <= 1 ){
+                       //no "nodes" found so perform a secondary check that we have text which resembles HTML
+                       nodes = curCell.textContent.match( /<\/?[a-zA-Z]{1}\w*[^>]*>/g );
+                       if( nodes && nodes.length ){
+                          //this text does resemble HTML, use the textContent as HTML and that will convert the text to HTML content.
+                          curCell.innerHTML = curCell.textContent;
+                        }
+                     }        
+                  }
+               }
+            }
+         }
+      }
+   } 
+ 
+
+   window.onload = function () {
+      loadReport(1);
+   }
+
+</script>
+</head>
+<body style="margin: 0">
+<noscript><div style="color:red; font-weight:bold; text-align:center;">This page uses Javascript. Your browser either doesn't support Javascript or you have it turned off. To see this page as it is meant to appear please use a Javascript enabled browser.</div></noscript>
+<!-- BEGIN BANNER -->
+<div id="headerTop">
+   <div id="Nav"><a href="/index.htm">Home</a> | <a href="/cgi-bin/browse-edgar?action=getcurrent">Latest Filings</a> | <a href="javascript:history.back()">Previous Page</a></div>
+   <div id="seal"><a href="http://www.sec.gov/index.htm"><img src="/images/sealTop.gif" alt="SEC Seal" border="0" /></a></div>
+   <div id="secWordGraphic"><img src="/images/bannerTitle.gif" alt="SEC Banner" /></div>
+</div>
+<div id="headerBottom">
+   <div id="searchHome"><a href="/edgar/searchedgar/webusers.htm">Search the Next-Generation EDGAR System</a></div>
+   <div id="PageTitle">View Filing Data</div>
+</div>
+<!-- END BANNER -->
+<!-- BEGIN BREADCRUMBS -->
+<div id="breadCrumbs">
+   <ul>
+      <li><a href="/">SEC Home</a> &#187;</li>
+      <li><a href="/edgar/searchedgar/webusers.htm">Search the Next-Generation EDGAR System</a> &#187;</li>
+      <li><a href="/edgar/searchedgar/companysearch.html">Company Search</a> &#187;</li>
+      <li class="last">Current Page</li>
+   </ul>
+</div>
+<!-- END BREADCRUMBS -->
+<!-- START COMPANY HEADERS DIV -->
+<div style="margin: 5px 20px 0px 20px; padding-top: 5px; padding-left: 5px;">
+   <div class="companyInfo">
+     <span class="companyName">Tesla, Inc. (Filer) <acronym title="Central Index Key">CIK</acronym>: 0001318605</span>
+   </div>
+   <div class="clear"></div>
+</div>
+<!-- END COMPANY HEADERS DIV -->
+<!-- START CONTENT DIV -->
+<div>
+   <table>
+     <tr>
+        <td colspan="2"><a class="xbrlviewer" style="color: black; font-weight: bold;" href="javascript:window.print();">Print Document</a>&nbsp;<a class="xbrlviewer" href="/Archives/edgar/data/1318605/000156459019003165/Financial_Report.xlsx">View Excel Document</a></td>
+     </tr>
+     <tr>
+       <td style="vertical-align: top;">
+         
+<div style="width: 170px; margin-right: 5px;">
+  <ul id="menu">
+<!-- cover_category = 0 -->    <li class="accordion">
+      <a id="menu_cat1" href="#">Cover</a>
+      <ul>
+            <li class="accordion" id="r1" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(1);">Document and Entity Information</a></li>
+      </ul>
+    </li>
+    <li class="accordion">
+      <a id="menu_cat2" href="#">Financial Statements</a>
+      <ul>
+            <li class="accordion" id="r2" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(2);">Consolidated Balance Sheets</a></li>
+            <li class="accordion" id="r3" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(3);">Consolidated Balance Sheets (Parenthetical)</a></li>
+            <li class="accordion" id="r4" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(4);">Consolidated Statements of Operations</a></li>
+            <li class="accordion" id="r5" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(5);">Consolidated Statements of Comprehensive Loss</a></li>
+            <li class="accordion" id="r6" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(6);">Consolidated Statements of Redeemable Noncontrolling Interest and Stockholders' Equity</a></li>
+            <li class="accordion" id="r7" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(7);">Consolidated Statements of Redeemable Noncontrolling Interest and Stockholders' Equity (Parenthetical)</a></li>
+            <li class="accordion" id="r8" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(8);">Consolidated Statements of Cash Flows</a></li>
+      </ul>
+    </li>
+    <li class="accordion">
+      <a id="menu_cat3" href="#">Notes to Financial Statements</a>
+      <ul>
+            <li class="accordion" id="r9" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(9);">Overview</a></li>
+            <li class="accordion" id="r10" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(10);">Summary of Significant Accounting Policies</a></li>
+            <li class="accordion" id="r11" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(11);">Business Combinations</a></li>
+            <li class="accordion" id="r12" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(12);">Intangible Assets</a></li>
+            <li class="accordion" id="r13" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(13);">Fair Value of Financial Instruments</a></li>
+            <li class="accordion" id="r14" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(14);">Inventory</a></li>
+            <li class="accordion" id="r15" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(15);">Solar Energy Systems, Leased and To Be Leased - Net</a></li>
+            <li class="accordion" id="r16" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(16);">Property, Plant, and Equipment</a></li>
+            <li class="accordion" id="r17" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(17);">Non-cancellable Operating Lease Payments Receivable</a></li>
+            <li class="accordion" id="r18" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(18);">Accrued Liabilities and Other</a></li>
+            <li class="accordion" id="r19" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(19);">Other Long-Term Liabilities</a></li>
+            <li class="accordion" id="r20" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(20);">Customer Deposits</a></li>
+            <li class="accordion" id="r21" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(21);">Long-Term Debt Obligations</a></li>
+            <li class="accordion" id="r22" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(22);">Common Stock</a></li>
+            <li class="accordion" id="r23" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(23);">Equity Incentive Plans</a></li>
+            <li class="accordion" id="r24" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(24);">Income Taxes</a></li>
+            <li class="accordion" id="r25" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(25);">Commitments and Contingencies</a></li>
+            <li class="accordion" id="r26" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(26);">Variable Interest Entity Arrangements</a></li>
+            <li class="accordion" id="r27" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(27);">Lease Pass-Through Financing Obligation</a></li>
+            <li class="accordion" id="r28" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(28);">Defined Contribution Plan</a></li>
+            <li class="accordion" id="r29" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(29);">Related Party Transactions</a></li>
+            <li class="accordion" id="r30" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(30);">Segment Reporting and Information about Geographic Areas</a></li>
+            <li class="accordion" id="r31" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(31);">Restructuring and Other</a></li>
+            <li class="accordion" id="r32" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(32);">Subsequent Events</a></li>
+            <li class="accordion" id="r33" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(33);">Quarterly Results of Operations</a></li>
+      </ul>
+    </li>
+    <li class="accordion">
+      <a id="menu_cat4" href="#">Accounting Policies</a>
+      <ul>
+            <li class="accordion" id="r34" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(34);">Summary of Significant Accounting Policies (Policies)</a></li>
+      </ul>
+    </li>
+    <li class="accordion">
+      <a id="menu_cat5" href="#">Notes Tables</a>
+      <ul>
+            <li class="accordion" id="r35" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(35);">Summary of Significant Accounting Policies (Tables)</a></li>
+            <li class="accordion" id="r36" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(36);">Business Combinations (Tables)</a></li>
+            <li class="accordion" id="r37" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(37);">Intangible Assets (Tables)</a></li>
+            <li class="accordion" id="r38" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(38);">Fair Value of Financial Instruments (Tables)</a></li>
+            <li class="accordion" id="r39" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(39);">Inventory (Tables)</a></li>
+            <li class="accordion" id="r40" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(40);">Solar Energy Systems, Leased and To Be Leased - Net (Tables)</a></li>
+            <li class="accordion" id="r41" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(41);">Property, Plant, and Equipment (Tables)</a></li>
+            <li class="accordion" id="r42" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(42);">Non-cancellable Operating Lease Payments Receivable (Tables)</a></li>
+            <li class="accordion" id="r43" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(43);">Accrued Liabilities and Other (Tables)</a></li>
+            <li class="accordion" id="r44" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(44);">Other Long-Term Liabilities (Tables)</a></li>
+            <li class="accordion" id="r45" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(45);">Long-Term Debt Obligations (Tables)</a></li>
+            <li class="accordion" id="r46" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(46);">Equity Incentive Plans (Tables)</a></li>
+            <li class="accordion" id="r47" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(47);">Income Taxes (Tables)</a></li>
+            <li class="accordion" id="r48" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(48);">Commitments and Contingencies (Tables)</a></li>
+            <li class="accordion" id="r49" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(49);">Variable Interest Entity Arrangements (Tables)</a></li>
+            <li class="accordion" id="r50" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(50);">Lease Pass-Through Financing Obligation (Tables)</a></li>
+            <li class="accordion" id="r51" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(51);">Related Party Transactions (Tables)</a></li>
+            <li class="accordion" id="r52" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(52);">Segment Reporting and Information about Geographic Areas (Tables)</a></li>
+            <li class="accordion" id="r53" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(53);">Quarterly Results of Operations (Tables)</a></li>
+      </ul>
+    </li>
+    <li class="accordion">
+      <a id="menu_cat6" href="#">Notes Details</a>
+      <ul>
+            <li class="accordion" id="r54" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(54);">Overview - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r55" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(55);">Summary of Significant Accounting Policies - Schedule of Impact of New Revenue Standard on Consolidated Financial Statements (Detail)</a></li>
+            <li class="accordion" id="r56" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(56);">Summary of Significant Accounting Policies - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r57" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(57);">Summary of Significant Accounting Policies - Schedule of Deferred Revenue Activity (Detail)</a></li>
+            <li class="accordion" id="r58" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(58);">Summary of Significant Accounting Policies - Additional Information (Detail1)</a></li>
+            <li class="accordion" id="r59" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(59);">Summary of Significant Accounting Policies - Schedule of Disaggregation of Revenue by Major Source (Detail)</a></li>
+            <li class="accordion" id="r60" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(60);">Summary of Significant Accounting Policies - Schedule of Potentially Dilutive Shares that were Excluded from Computation of Diluted Net Income (Loss) per Share of Common Stock (Detail)</a></li>
+            <li class="accordion" id="r61" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(61);">Summary of Significant Accounting Policies - Schedule of Cash and Cash Equivalents and Restricted Cash (Detail)</a></li>
+            <li class="accordion" id="r62" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(62);">Summary of Significant Accounting Policies - Schedule of Cash and Cash Equivalents and Restricted Cash (Parenthetical) (Detail)</a></li>
+            <li class="accordion" id="r63" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(63);">Summary of Significant Accounting Policies - Estimated Useful Lives of Respective Assets (Detail)</a></li>
+            <li class="accordion" id="r64" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(64);">Summary of Significant Accounting Policies - Schedule of Estimated Useful Lives of Related Assets (Detail)</a></li>
+            <li class="accordion" id="r65" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(65);">Summary of Significant Accounting Policies - Schedule of Accrued Warranty Activity (Detail)</a></li>
+            <li class="accordion" id="r66" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(66);">Business Combinations - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r67" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(67);">Business Combinations - Schedule of Fair Values of the Assets Acquired and the Liabilities Assumed (Detail)</a></li>
+            <li class="accordion" id="r68" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(68);">Business Combinations - Schedule of Fair Values of the Identified Intangible Assets and their Useful Lives (Detail)</a></li>
+            <li class="accordion" id="r69" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(69);">Business Combinations - Schedule of Fair Value of the Consideration Transferred as of Acquisition Date (Detail)</a></li>
+            <li class="accordion" id="r70" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(70);">Business Combinations - Schedule of the Fair Value of Consideration Transferred as of Acquisition Date (Parenthetical) (Detail)</a></li>
+            <li class="accordion" id="r71" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(71);">Business Combinations - Schedule of Unaudited Pro Forma Information (Detail)</a></li>
+            <li class="accordion" id="r72" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(72);">Intangible Assets - Summary of Acquired Intangible Assets (Detail)</a></li>
+            <li class="accordion" id="r73" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(73);">Intangible Assets - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r74" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(74);">Intangible Assets - Total Future Amortization Expense for Intangible Assets (Detail)</a></li>
+            <li class="accordion" id="r75" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(75);">Fair Value of Financial Instruments - Schedule of Fair Value Hierarchy of Financial Assets Carried at Fair Value (Detail)</a></li>
+            <li class="accordion" id="r76" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(76);">Fair Value of Financial Instruments - Schedule of Interest Rate Swaps Outstanding (Detail)</a></li>
+            <li class="accordion" id="r77" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(77);">Fair Value of Financial Instruments - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r78" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(78);">Fair Value of Financial Instruments - Schedule of Estimated Fair Values and Carrying Values (Detail)</a></li>
+            <li class="accordion" id="r79" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(79);">Inventory - Schedule of Inventory (Detail)</a></li>
+            <li class="accordion" id="r80" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(80);">Inventory - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r81" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(81);">Solar Energy Systems, Leased and To Be Leased - Net - Components of Solar Energy Systems, Leased and to Be Leased (Detail)</a></li>
+            <li class="accordion" id="r82" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(82);">Solar Energy Systems, Leased and To Be Leased - Net - Components of Solar Energy Systems, Leased and to Be Leased (Parenthetical) (Detail)</a></li>
+            <li class="accordion" id="r83" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(83);">Property Plant and Equipment - Schedule of Property, Plant and Equipment, Net (Detail)</a></li>
+            <li class="accordion" id="r84" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(84);">Property Plant and Equipment - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r85" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(85);">Non-cancellable Operating Lease Payments Receivable - Schedule of Future Minimum Lease Payments Non-cancellable Operating Leases (Detail)</a></li>
+            <li class="accordion" id="r86" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(86);">Accrued Liabilities and Other - Schedule of Accrued Liabilities and Other Current Liabilities (Detail)</a></li>
+            <li class="accordion" id="r87" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(87);">Other Long-Term Liabilities - Schedule of Other Long-term Liabilities (Detail)</a></li>
+            <li class="accordion" id="r88" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(88);">Customer Deposits - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r89" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(89);">Long-Term Debt Obligations - Summary of Debt (Detail)</a></li>
+            <li class="accordion" id="r90" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(90);">Long-Term Debt Obligations - 2018 Notes, Bond Hedges and Warrant Transactions - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r91" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(91);">Long-Term Debt Obligations - 2019 Notes, 2021 Notes, Bond Hedges and Warrant Transactions - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r92" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(92);">Long-Term Debt Obligations - 2022 Notes, Bond Hedges and Warrant Transactions - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r93" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(93);">Long-Term Debt Obligations - 2025 Notes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r94" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(94);">Long-Term Debt Obligations - Credit Agreement - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r95" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(95);">Long-Term Debt Obligations - 2.75% Convertible Senior Notes due in 2018 - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r96" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(96);">Long-Term Debt Obligations - 1.625% Convertible Senior Notes due in 2019 - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r97" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(97);">Long-Term Debt Obligations - Zero-Coupon Convertible Senior Notes due in 2020 - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r98" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(98);">Long-Term Debt Obligations - Related Party Promissory Notes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r99" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(99);">Long-Term Debt Obligations - Warehouse Agreements - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r100" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(100);">Long-term Debt Obligations - Canada Credit Facility - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r101" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(101);">Long-term Debt Obligations - Term Loan - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r102" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(102);">Long-term Debt Obligations - Revolving Aggregation Credit Facility - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r103" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(103);">Long-term Debt Obligations - Cash Equity Debt - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r104" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(104);">Long-term Debt Obligations - Solar Asset-backed Notes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r105" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(105);">Long-term Debt Obligations - Solar Loan-backed Notes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r106" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(106);">Long-term Debt Obligations - Automotive Asset-backed Notes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r107" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(107);">Long-term Debt Obligations - Solar Renewable Energy Credit and other Loans - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r108" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(108);">Long-term Debt Obligations - Schedule of Interest Expense (Detail)</a></li>
+            <li class="accordion" id="r109" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(109);">Long-term Debt Obligations - Pledged Assets - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r110" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(110);">Common Stock - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r111" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(111);">Equity Incentive Plans - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r112" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(112);">Equity Incentive Plans - Summary of Stock Option and RSU Activity (Detail)</a></li>
+            <li class="accordion" id="r113" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(113);">Equity Incentive Plans - Schedule of Fair Value of Stock Option Award and ESPP on Grant Date (Detail)</a></li>
+            <li class="accordion" id="r114" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(114);">Equity Incentive Plans - Summary of Operational Milestone Based on Revenue or Adjusted EBITDA (Detail)</a></li>
+            <li class="accordion" id="r115" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(115);">Equity Incentive Plans - Summary of Stock-Based Compensation Expense (Detail)</a></li>
+            <li class="accordion" id="r116" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(116);">Income Taxes - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r117" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(117);">Income Taxes - Schedule of Loss Before Provision for Income Taxes (Detail)</a></li>
+            <li class="accordion" id="r118" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(118);">Income Taxes - Components of Provision for Income Taxes (Detail)</a></li>
+            <li class="accordion" id="r119" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(119);">Income Taxes - Schedule of Deferred Tax Assets (Liabilities) (Detail)</a></li>
+            <li class="accordion" id="r120" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(120);">Income Taxes - Schedule of Reconciliation of Taxes at Federal Statutory Rate to Provision for Income Taxes (Detail)</a></li>
+            <li class="accordion" id="r121" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(121);">Income Taxes - Schedule of Reconciliation of Statutory Federal Income Taxes to Effective Taxes (Parenthetical) (Detail)</a></li>
+            <li class="accordion" id="r122" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(122);">Income Taxes - Schedule of Changes to Gross Unrecognized Tax Benefits (Detail)</a></li>
+            <li class="accordion" id="r123" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(123);">Commitments and Contingencies - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r124" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(124);">Commitments and Contingencies - Schedule of Future Minimum Commitments for Leases (Detail)</a></li>
+            <li class="accordion" id="r125" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(125);">Variable Interest Entity Arrangements - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r126" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(126);">Variable Interest Entity Arrangements - Carrying Values of Assets and Liabilities of Subsidiary in Consolidated Balance Sheets (Detail)</a></li>
+            <li class="accordion" id="r127" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(127);">Lease Pass-Through Financing Obligation - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r128" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(128);">Lease Pass-Through Financing Obligation - Schedule of Future Minimum Lease Payments to be Received for Operating Leases (Detail)</a></li>
+            <li class="accordion" id="r129" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(129);">Defined Contribution Plan - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r130" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(130);">Related Party Transactions - Summary of Related Party Transactions (Detail)</a></li>
+            <li class="accordion" id="r131" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(131);">Related Party Transactions - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r132" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(132);">Segment Reporting and Information about Geographic Areas - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r133" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(133);">Segment Reporting and Information about Geographic Areas - Schedule of Total Revenues and Gross Margin by Reportable Segment (Detail)</a></li>
+            <li class="accordion" id="r134" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(134);">Segment Reporting and Information about Geographic Areas - Schedule of Revenues by Geographic Area (Detail)</a></li>
+            <li class="accordion" id="r135" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(135);">Segment Reporting and Information about Geographic Areas - Schedule of Long-Lived Assets by Geographic Area (Detail)</a></li>
+            <li class="accordion" id="r136" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(136);">Restructuring and Other - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r137" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(137);">Subsequent Events - Additional Information (Detail)</a></li>
+            <li class="accordion" id="r138" ><a class="xbrlviewer" onClick="javascript:highlight(this);" href="javascript:loadReport(138);">Quarterly Results of Operations - Schedule of Selected Quarterly Results of Operations (Detail)</a></li>
+      </ul>
+    </li>
+    <li><a href="javascript:loadReport(1+138);"><img src="/images/reports.gif" border="0" height="12" width="9" alt="Reports" />All Reports</a></li>
+  </ul>
+</div>
+
+       </td>
+       <td style="vertical-align: top;">
+         <div id="reportDiv"></div> 
+       </td>
+     </tr>
+   </table>
+</div>
+<div style="clear:both"></div>
+<div id="help"></div>
+<!-- END CONTENT DIV -->
+<!-- START FILER DIV -->
+<div id="contentDiv">
+   <div id="filerDiv">
+      <div class="mailer">Mailing Address
+         <span class="mailerAddress">3500 DEER CREEK RD</span>
+         <span class="mailerAddress">
+PALO ALTO CA 94304         </span>
+      </div>
+      <div class="mailer">Business Address
+         <span class="mailerAddress">3500 DEER CREEK RD</span>
+         <span class="mailerAddress">
+PALO ALTO CA 94304         </span>
+         <span class="mailerAddress">650-681-5000</span>
+      </div>
+      <div class="companyInfo">
+          <span class="companyName">Tesla, Inc. (Filer) <acronym title="Central Index Key">CIK</acronym>: <a href="/cgi-bin/browse-edgar?CIK=0001318605&amp;action=getcompany">0001318605 (see all company filings)</a></span> <p class="identInfo"><acronym title="Internal Revenue Service Number">IRS No.</acronym>: <strong>912197729</strong> | State of Incorp.: <strong>DE</strong> | Fiscal Year End: <strong>1231</strong><br />Type: <strong>10-K</strong> | Act: <strong>34</strong> | File No.: <a href="/cgi-bin/browse-edgar?filenum=001-34756&amp;action=getcompany"><strong>001-34756</strong></a> | Film No.: <strong>19613254</strong><br /><acronym title="Standard Industrial Code">SIC</acronym>: <b><a href="/cgi-bin/browse-edgar?action=getcompany&amp;SIC=3711&amp;owner=include">3711</a></b> Motor Vehicles &amp; Passenger Car Bodies<br />Assistant Director 5</p>
+      </div>
+      <div class="clear"></div>
+   </div>
+</div>
+<!-- END FILER DIV -->
+<!-- END FOOTER DIV -->
+<div id="footer">
+  <div class="currentURL">https://www.sec.gov/cgi-bin/viewer</div>
+  <div class="links"><a href="/index.htm">Home</a> | <a href="/edgar/searchedgar/webusers.htm">Search the Next-Generation EDGAR System</a> | <a href="javascript:history.back()">Previous Page</a></div>
+  <div class="modified">Modified 02/20/2019</div>
+</div>
+<!-- END FOOTER DIV -->
+</body>
+</html>
