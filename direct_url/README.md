@@ -24,4 +24,4 @@ For each item in the input file, I output all relevant keys, and add two new key
 
 ### 4. Known issues
 
-Some items provide xml format forms instead htm which causes access denied when trying to download the htm. Simply change the url with .xml ending can solve this problem.
+Some items provide xml format forms instead of htm, which causes access denied when trying to download the htm. To fix this, run `python html2xml.py`. This script looks for all files less than 1kb in htm folder and redownload the file with xml extension. Next step is after figuring out the html file cannot be downloaded because it's xml, download it as xml, as in, merge `downloader.py` and `html2xml.py`.
