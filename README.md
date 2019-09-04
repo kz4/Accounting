@@ -5,5 +5,6 @@ Given a [list of company](https://github.com/kz4/Accounting/blob/master/direct_u
 1. [direct_url](https://github.com/kz4/Accounting/tree/master/direct_url) downloads the html into htm folder
 2. [html2csv](https://github.com/kz4/Accounting/tree/master/html2csv) converts the a single table in html page to csv
 3. [xml2html](https://github.com/kz4/Accounting/tree/master/xml2html) converts a xml page to html page
+4. [table_splitter](https://github.com/kz4/Accounting/tree/master/table_splitter) split multiple tables in a html page into separate files
 ## Run
 See each individual folder for details
