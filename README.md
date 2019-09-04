@@ -1,14 +1,9 @@
-# Accounting
-## Prerequisite
-Python, Selenium and BeautifulSoup
+# Getting intangible data
 ## Objective
-Given a list of company, this scraps the Intangible Assets page from SEC for all the companies.
-Tesla for example
-1. Go to https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=10-K&dateb=&owner=exclude&count=40
-2. Click on each Interactive Data
-3. Go to Notes to Financial Statements - Intangible Assets - download the html file
-4. The naming convention would be: CIK0001318605_2017, CIK0001318605_2018
+Given a [list of company](https://github.com/kz4/Accounting/blob/master/direct_url/tenk2008after.csv), this scraps the Intangible Assets page from SEC for all the companies. The downloaded webpages are in the format of html and xml
+## Overview
+1. [direct_url](https://github.com/kz4/Accounting/tree/master/direct_url) downloads the html into htm folder
+2. [html2csv](https://github.com/kz4/Accounting/tree/master/html2csv) converts the a single table in html page to csv
+3. [xml2html](https://github.com/kz4/Accounting/tree/master/xml2html) converts a xml page to html page
 ## Run
-`python intangible.py`
-## Example
-See output folder for sample html result.
+See each individual folder for details
